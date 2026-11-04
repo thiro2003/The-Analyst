@@ -28,8 +28,6 @@
 ### Chat & Visualization
 ![The Analyst - Chart Output](Visualization.png)
 
-> 💡 Keep `Visualization.png` in the repo root (or move it to a `screenshots/` folder and update the path above).
-
 ---
 
 ## 🛠️ Tech Stack
@@ -53,14 +51,19 @@
 ```
 The-Analyst/
 ├── .streamlit/          # Streamlit configuration
-├── my_database/         # Local ChromaDB vector store (git-ignored)
-├── app.py               # Main application (UI, RAG pipeline, charts)
-├── requirement.txt      # Python dependencies
+├── .gitignore           # Files and folders excluded from Git
+├── README.md            # Project documentation
 ├── Visualization.png    # Screenshot used in the README
-├── .env                 # Your secrets (git-ignored)
-├── .env.example         # Example environment variables
-├── .gitignore
-└── README.md
+├── app.py               # Main application (UI, RAG pipeline, charts)
+└── requirement.txt      # Python dependencies
+```
+
+**Created locally when you run the app (git-ignored, not in the repo):**
+
+```
+├── .env                 # Your secrets (GROQ_API_KEY, GROQ_MODEL)
+├── .venv/               # Your virtual environment
+└── my_database/         # Local ChromaDB vector store
 ```
 
 ---
@@ -87,8 +90,8 @@ The-Analyst/
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/<your-username>/<your-repo-name>.git
-cd <your-repo-name>
+git clone https://github.com/thiro2003/The-Analyst.git
+cd The-Analyst
 ```
 
 ### 2. Create and activate a virtual environment
@@ -113,7 +116,7 @@ pip install -r requirement.txt
 
 ### 4. Configure environment variables
 
-Create a `.env` file in the project root:
+Create a file named `.env` in the project root (next to `app.py`):
 
 ```env
 GROQ_API_KEY=your_groq_api_key_here
@@ -201,8 +204,7 @@ This project is licensed under the MIT License.
 
 ## 👤 Author
 
-**<Your Name>**
-- GitHub: [@your-username](https://github.com/your-username)
-- LinkedIn: [Your Name](https://linkedin.com/in/your-profile)
+**thiro2003**
+- GitHub: [@thiro2003](https://github.com/thiro2003)
 
 ⭐ If you like this project, give it a star!
